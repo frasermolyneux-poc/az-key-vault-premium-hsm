@@ -8,7 +8,7 @@ resource "azurerm_key_vault_certificate" "certificate" {
     }
 
     key_properties {
-      exportable = true
+      exportable = false // has to be false for HSM keys
       key_size   = 2048
       key_type   = "RSA-HSM"
       reuse_key  = true
