@@ -1,0 +1,7 @@
+az keyvault key list --vault-name kvdedcba0a937d
+
+az keyvault key show --id https://kvdedcba0a937d.vault.azure.net/keys/certificate/f7b7a6d3a851461dafa08a9627d30322
+
+az keyvault certificate create --vault-name kvdedcba0a937d -n testcert -p `@policy.json
+
+az keyvault key show --id https://kvdedcba0a937d.vault.azure.net/keys/testcert/16b37d8d20a941b493f81a7f5d481f81
